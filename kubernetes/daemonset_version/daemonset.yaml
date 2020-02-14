@@ -25,15 +25,3 @@ spec:
       - name: counter
         persistentVolumeClaim:
           claimName: counter
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: counter
-spec:
-  accessModes:
-  - ReadWriteMany
-  resources:
-    requests:
-      storage: 50Mi
-  storageClassName: efs
